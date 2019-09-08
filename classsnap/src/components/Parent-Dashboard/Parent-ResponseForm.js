@@ -9,6 +9,7 @@ const ParentResponseForm = () => {
       </div>
       <h4>Rate your child's response!</h4>
       <Rating maxRating={5} clearable />
+      <button>Submit</button>
     </div>
   );
 };
