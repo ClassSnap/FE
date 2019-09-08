@@ -6,6 +6,7 @@ import "./App.css";
 import Login from "./components/SignUp_Pages/User-signin";
 import AddQuestionForm from "./components/Teacher-Dashboard/AddQuestionForm";
 import ParentResponseForm from "./components//Parent-Dashboard/Parent-ResponseForm";
+import ParentNewQuestionList from "./components/Parent-Dashboard/Parent-NewQuestionList";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Login />
       <AddQuestionForm />
       <ParentResponseForm />
+      <ParentNewQuestionList />
     </div>
   );
 }
