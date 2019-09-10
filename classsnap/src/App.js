@@ -1,5 +1,6 @@
 import React from "react";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./App.css";
 
 //components
@@ -11,13 +12,28 @@ import ParentAnsweredQuestionList from "./components/Parent-Dashboard/Parent-Ans
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-      <AddQuestionForm />
-      <ParentResponseForm />
-      <ParentNewQuestionList />
-      <ParentAnsweredQuestionList />
-    </div>
+    <Router>
+      <div className="App">
+        <h1>ClassSnap in Progress</h1>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/teacher/add-question" component={AddQuestionForm} />
+        <Route
+          exact
+          path="/parent/response-form"
+          component={ParentResponseForm}
+        />
+        <Route
+          exact
+          path="/parent/new-question-list"
+          component={ParentNewQuestionList}
+        />
+        <Route
+          exact
+          path="/parent/answered=question-list"
+          compoentn={ParentAnsweredQuestionList}
+        />
+      </div>
+    </Router>
   );
 }
 
