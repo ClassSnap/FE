@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //component
 import ParentNewQuestionCard from "./Parent-NewQuestionCard";
 
+//context
+import { QuestionContext } from "../../contexts/QuestionContext";
+import { Item } from "semantic-ui-react";
+
 const ParentNewQuestionList = () => {
+  const { sampleQuestions } = useContext(QuestionContext);
+
   return (
-    <ParentNewQuestionCard
-      header="Reading Question from Ms. Li'"
-      date="10/1/2019"
-      question="Today, we read about Georgina's plan to steal a dog. Why did Georgina plan to steal a dog? If you were Georgina, would you steal a dog? Why or why not?"
-    />
+    <div className="question-list">
+      {sampleQuestions.map(item => (
+        <ParentNewQuestionCard
+          key={item.date}
+          subject={item.subject}
+          teacher={item.teacher}
+          date={item.date}
+          question={item.question}
+        />
+      ))}
+    </div>
   );
 };
 
