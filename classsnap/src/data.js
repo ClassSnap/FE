@@ -18,6 +18,7 @@ export const sampleQuestions = [
 
 export const sampleStudentData = [
   {
+    id: 1,
     question:
       "Explain the difference between Simile and Metaphor; Create an example of each of them",
     class: "Class 1",
@@ -33,5 +34,24 @@ export const sampleStudentData = [
       "Camila Garcia",
     ],
     rateFive: ["Marciela Gonzalez ", "Zoey Prince"],
+    average: 3.3,
+  },
+  {
+    id: 2,
+    question: "How do you solve (16-3) + 4 x 7?",
+    class: "Class 1",
+    subject: "Math",
+    date: "9/27/2019",
+    rateOne: ["Simon Reed ", "Chris Singleton"],
+    rateTwo: ["Daniel Ayala ", "Charlie Tan ", "Amiah Collins"],
+    rateThree: ["Roman Roberts ", "Jasmine Salas"],
+    rateFour: [
+      "Nicholas Lozano ",
+      "Jordin Yeung ",
+      "Liz Rios ",
+      "Camila Garcia",
+    ],
+    rateFive: ["Marciela Gonzalez ", "Zoey Prince"],
+    average: 3.5,
   },
 ];

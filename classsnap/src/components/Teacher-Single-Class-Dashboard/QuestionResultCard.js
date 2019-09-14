@@ -5,7 +5,7 @@ const QuestionResultCard = props => {
   return (
     <Card
       header={props.header}
-      meta={`Due on ${props.date}`}
+      meta={`Sent on ${props.date}`}
       description={`Class Average: ${props.average}`}
     />
   );
