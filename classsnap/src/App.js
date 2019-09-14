@@ -9,6 +9,7 @@ import AddQuestionForm from "./components/Teacher-Dashboard/AddQuestionForm";
 import ParentResponseForm from "./components//Parent-Dashboard/Parent-ResponseForm";
 import ParentNewQuestionList from "./components/Parent-Dashboard/Parent-NewQuestionList";
 import ParentAnsweredQuestionList from "./components/Parent-Dashboard/Parent-AnsweredQuestionList";
+import QuestionResult from "./components/Teacher-Single-Class-Dashboard/QuestionResult";
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         <h1>ClassSnap in Progress</h1>
         <Route exact path="/login" component={Login} />
         <Route exact path="/teacher/add-question" component={AddQuestionForm} />
+        <Route
+          exact
+          path="/teacher/question-result"
+          component={QuestionResult}
+        />
         <Route
           exact
           path="/parent/response-form"
@@ -29,8 +35,8 @@ function App() {
         />
         <Route
           exact
-          path="/parent/answered=question-list"
-          compoentn={ParentAnsweredQuestionList}
+          path="/parent/answered-question-list"
+          component={ParentAnsweredQuestionList}
         />
       </div>
     </Router>
