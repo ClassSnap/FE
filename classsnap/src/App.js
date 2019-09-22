@@ -13,9 +13,19 @@ import QuestionResult from "./components/Teacher-Single-Class-Dashboard/Question
 import QuestionResultList from "./components/Teacher-Single-Class-Dashboard/QuestionResultList";
 import NavBar from "./components/NavBar";
 
+//data
+import { sampleQuestions, sampleStudentData } from "./data";
+
+//context
+import { QuestionContext } from "./contexts/QuestionContext";
+import { StudentDataContext } from "./contexts/StudentDataContext";
+
 function App() {
   return (
-    <Router>
+
+    <QuestionContext.Provider value={{ sampleQuestions }}>
+      <StudentDataContext.Provider value={{ sampleStudentData }}>
+         <Router>
       <div className="App">
         <NavBar />
         <div className="container">
@@ -53,6 +63,10 @@ function App() {
         </div>
       </div>
     </Router>
+ </StudentDataContext.Provider>
+    </QuestionContext.Provider>
+
+  
   );
 }
 

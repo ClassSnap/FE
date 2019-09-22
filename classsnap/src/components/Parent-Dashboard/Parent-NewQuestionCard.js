@@ -5,7 +5,7 @@ import { Card } from "semantic-ui-react";
 const ParentNewQuestionCard = props => {
   return (
     <Card
-      header={props.header}
+      header={`${props.subject} Question from ${props.teacher}`}
       meta={`Due on ${props.date}`}
       description={props.question}
     />
