@@ -7,7 +7,8 @@ const AddQuestionForm = () => {
   return (
     <div className="question-form">
       <Form className="form">
-        <h2>Add Question</h2>
+        <h2>Extend Your Impact to Outside the Classroom</h2>
+        <h3>Send Your Question Here</h3>
         <div className="basic-info">
           <div className="class">
             <label>Class</label>
