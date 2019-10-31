@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import "./App.css";
 
 //components
-import Login from "./components/SignUp_Pages/User-signin";
+import Login from "./components/SignUp_Pages/teacher-signin";
 import AddQuestionForm from "./components/Teacher-Dashboard/AddQuestionForm";
 import ParentResponseForm from "./components//Parent-Dashboard/Parent-ResponseForm";
 import ParentNewQuestionList from "./components/Parent-Dashboard/Parent-NewQuestionList";
