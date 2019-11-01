@@ -4,7 +4,10 @@ import { Route } from "react-router-dom";
 import "./App.css";
 
 //components
-import Login from "./components/SignUp_Pages/teacher-signin";
+import teacherLogin from "./components/SignUp_Pages/teacher-signin";
+import parentLogin from "./components/SignUp_Pages/parent-signin";
+import teacherReg from "./components/SignUp_Pages/teacher-signup";
+import parentReg from "./components/SignUp_Pages/parent-signup";
 import AddQuestionForm from "./components/Teacher-Dashboard/AddQuestionForm";
 import ParentResponseForm from "./components//Parent-Dashboard/Parent-ResponseForm";
 import ParentNewQuestionList from "./components/Parent-Dashboard/Parent-NewQuestionList";
@@ -22,51 +25,52 @@ import { StudentDataContext } from "./contexts/StudentDataContext";
 
 function App() {
   return (
-
     <QuestionContext.Provider value={{ sampleQuestions }}>
       <StudentDataContext.Provider value={{ sampleStudentData }}>
-         <Router>
-      <div className="App">
-        <NavBar />
-        <div className="container">
-          <Route exact path="/login" component={Login} />
-          <Route
-            exact
-            path="/teacher/add-question"
-            component={AddQuestionForm}
-          />
-          <Route
-            exact
-            path="/teacher/question-result-list"
-            component={QuestionResultList}
-          />
-          <Route
-            exact
-            path="/teacher/question-result"
-            component={QuestionResult}
-          />
-          <Route
-            exact
-            path="/parent/response-form"
-            component={ParentResponseForm}
-          />
-          <Route
-            exact
-            path="/parent/new-question-list"
-            component={ParentNewQuestionList}
-          />
-          <Route
-            exact
-            path="/parent/answered-question-list"
-            component={ParentAnsweredQuestionList}
-          />
-        </div>
-      </div>
-    </Router>
- </StudentDataContext.Provider>
-    </QuestionContext.Provider>
+        <Router>
+          <div className="App">
+            <NavBar />
+            <div className="container">
+              <Route exact path="/teacherlogin" component={teacherLogin} />
+              <Route exact path="/parentlogin" component={parentLogin} />
+              <Route exact path="/teachersignup" component={teacherReg} />
+              <Route exact path="/parentsignup" component={parentReg} />
 
-  
+              <Route
+                exact
+                path="/teacher/add-question"
+                component={AddQuestionForm}
+              />
+              <Route
+                exact
+                path="/teacher/question-result-list"
+                component={QuestionResultList}
+              />
+              <Route
+                exact
+                path="/teacher/question-result"
+                component={QuestionResult}
+              />
+              <Route
+                exact
+                path="/parent/response-form"
+                component={ParentResponseForm}
+              />
+              <Route
+                exact
+                path="/parent/new-question-list"
+                component={ParentNewQuestionList}
+              />
+              <Route
+                exact
+                path="/parent/answered-question-list"
+                component={ParentAnsweredQuestionList}
+              />
+            </div>
+          </div>
+        </Router>
+      </StudentDataContext.Provider>
+    </QuestionContext.Provider>
   );
 }
 

@@ -54,8 +54,8 @@ const FormikLoginForm = withFormik({
 
 const mapStateToProps = state => {
   return {
-    isLoading: state.parentAuth.isLoading,
-    error: state.parentAuth.error,
+    // isLoading: state.parentAuth.isLoading,
+    // error: state.parentAuth.error,
   };
 };
 

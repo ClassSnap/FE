@@ -28,3 +28,5 @@ export const login = (credentials, history) => {
       });
   };
 };
+
+export const register = "";
