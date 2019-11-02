@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { Switch, HashRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -30,43 +30,45 @@ function App() {
         <Router>
           <div className="App">
             <NavBar />
-            <div className="container">
-              <Route exact path="/teacherlogin" component={teacherLogin} />
-              <Route exact path="/parentlogin" component={parentLogin} />
-              <Route exact path="/teachersignup" component={teacherReg} />
-              <Route exact path="/parentsignup" component={parentReg} />
+            <Switch>
+              <div className="container">
+                <Route exact path="/teacherlogin" component={teacherLogin} />
+                <Route exact path="/parentlogin" component={parentLogin} />
+                <Route exact path="/teachersignup" component={teacherReg} />
+                <Route exact path="/parentsignup" component={parentReg} />
 
-              <Route
-                exact
-                path="/teacher/add-question"
-                component={AddQuestionForm}
-              />
-              <Route
-                exact
-                path="/teacher/question-result-list"
-                component={QuestionResultList}
-              />
-              <Route
-                exact
-                path="/teacher/question-result"
-                component={QuestionResult}
-              />
-              <Route
-                exact
-                path="/parent/response-form"
-                component={ParentResponseForm}
-              />
-              <Route
-                exact
-                path="/parent/new-question-list"
-                component={ParentNewQuestionList}
-              />
-              <Route
-                exact
-                path="/parent/answered-question-list"
-                component={ParentAnsweredQuestionList}
-              />
-            </div>
+                <Route
+                  exact
+                  path="/teacher/add-question"
+                  component={AddQuestionForm}
+                />
+                <Route
+                  exact
+                  path="/teacher/question-result-list"
+                  component={QuestionResultList}
+                />
+                <Route
+                  exact
+                  path="/teacher/question-result"
+                  component={QuestionResult}
+                />
+                <Route
+                  exact
+                  path="/parent/response-form"
+                  component={ParentResponseForm}
+                />
+                <Route
+                  exact
+                  path="/parent/new-question-list"
+                  component={ParentNewQuestionList}
+                />
+                <Route
+                  exact
+                  path="/parent/answered-question-list"
+                  component={ParentAnsweredQuestionList}
+                />
+              </div>
+            </Switch>
           </div>
         </Router>
       </StudentDataContext.Provider>

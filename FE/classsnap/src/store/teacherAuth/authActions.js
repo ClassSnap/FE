@@ -11,11 +11,14 @@ import {
 } from "./types";
 
 //login action
-export const login = (teachers, history) => {
+export const login = (credentials, history) => {
   return dispatch => {
     dispatch({ type: LOGIN_START });
     axios
-      .post("https://class-snap.herokuapp.com/api/auth/teacher/login", teachers)
+      .post(
+        "https://class-snap.herokuapp.com/api/auth/teacher/login",
+        credentials,
+      )
       .then(res => {
         dispatch({ type: LOGIN_SUCCESS, payload: res.data });
         console.log(res.data);
